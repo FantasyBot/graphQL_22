@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
+import Button from "../components/Button";
 
 const GET_PRODUCTS = gql`
   query {
@@ -20,6 +21,7 @@ const Home = () => {
       {data.products.map((product) => (
         <li key={product.id}>{product.name}</li>
       ))}
+      <Button label="Click" backgroundColor="yellow" size="lg" />
     </ul>
   );
 };
